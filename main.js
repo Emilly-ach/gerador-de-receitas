@@ -1,7 +1,3 @@
-/* =====================================================
-   BANCO DE RECEITAS
-===================================================== */
-
 const comidas = [
 
     {
@@ -544,16 +540,8 @@ const comidas = [
 ];
 
 
-/* =====================================================
-   VARIÁVEL DA RECEITA ATUAL
-===================================================== */
-
 let comidaAtual = null;
 
-
-/* =====================================================
-   GERAR COMIDA
-===================================================== */
 
 function gerarComida() {
 
@@ -650,10 +638,6 @@ function gerarComida() {
 }
 
 
-/* =====================================================
-   MOSTRAR RESULTADO
-===================================================== */
-
 function mostrarResultado(comida) {
 
     comidaAtual = comida;
@@ -724,7 +708,7 @@ function mostrarResultado(comida) {
     });
 
 
-    /* PREPARO */
+   
 
     const stepsList =
         document.getElementById("stepsList");
@@ -764,10 +748,6 @@ function mostrarResultado(comida) {
 }
 
 
-/* =====================================================
-   LINK DA RECEITA
-===================================================== */
-
 function criarLinkReceita(comida) {
 
     const url =
@@ -790,9 +770,7 @@ function criarLinkReceita(comida) {
 }
 
 
-/* =====================================================
-   ATUALIZAR URL
-===================================================== */
+
 
 function atualizarURL(id) {
 
@@ -827,9 +805,6 @@ function atualizarURL(id) {
 }
 
 
-/* =====================================================
-   COMPARTILHAR
-===================================================== */
 
 async function compartilhar() {
 
@@ -924,10 +899,6 @@ async function compartilhar() {
 }
 
 
-/* =====================================================
-   COPIAR LINK
-===================================================== */
-
 async function copiarLink() {
 
     const input =
@@ -963,11 +934,6 @@ async function copiarLink() {
     }
 
 }
-
-
-/* =====================================================
-   COPIAR TEXTO
-===================================================== */
 
 async function copiarTexto(texto) {
 
@@ -1020,9 +986,6 @@ async function copiarTexto(texto) {
 }
 
 
-/* =====================================================
-   FAVORITAR
-===================================================== */
 
 function favoritar() {
 
@@ -1056,10 +1019,6 @@ function favoritar() {
 }
 
 
-/* =====================================================
-   TOAST
-===================================================== */
-
 function mostrarToast(mensagem) {
 
     const toast =
@@ -1086,11 +1045,6 @@ function mostrarToast(mensagem) {
     }, 2500);
 
 }
-
-
-/* =====================================================
-   CARREGAR RECEITA PELO LINK
-===================================================== */
 
 function carregarReceitaDoLink() {
 
@@ -1133,10 +1087,6 @@ function carregarReceitaDoLink() {
 
 }
 
-
-/* =====================================================
-   MOSTRAR RECEITA DO LINK
-===================================================== */
 
 function mostrarResultadoSemAlterarURL(
     comida
@@ -1242,10 +1192,6 @@ function mostrarResultadoSemAlterarURL(
 
 }
 
-
-/* =====================================================
-   INICIALIZAÇÃO
-===================================================== */
 
 document.addEventListener(
     "DOMContentLoaded",
