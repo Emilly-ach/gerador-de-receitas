@@ -1,6 +1,4 @@
-// ========================================================
-// BANCO DE DADOS DE COMIDAS
-// ========================================================
+
 const comidas = [
     {
         id: 1,
@@ -364,15 +362,9 @@ const comidas = [
     }
 ];
 
-// ========================================================
-// ESTADO GLOBAL DA APLICAÇÃO
-// ========================================================
 let comidaAtual = null;
 let favoritado = false;
 
-// ========================================================
-// LÓGICA PRINCIPAL - GERAR COMIDA
-// ========================================================
 function gerarComida() {
     const tipo = document.getElementById("tipo").value;
     const refeicao = document.getElementById("refeicao").value;
@@ -410,9 +402,7 @@ function gerarComida() {
     exibirResultado(comidaAtual);
 }
 
-// ========================================================
-// MANIPULAÇÃO DO DOM - RENDERIZAÇÃO
-// ========================================================
+
 function exibirResultado(comida) {
     const painel = document.getElementById("resultado");
 
@@ -446,9 +436,6 @@ function exibirResultado(comida) {
     painel.scrollIntoView({ behavior: "smooth" });
 }
 
-// ========================================================
-// RECURSOS INTERATIVOS - FAVORITOS E COMPARTILHAMENTO
-// ========================================================
 function favoritar() {
     favoritado = !favoritado;
     atualizarBotaoFavorito();
@@ -509,9 +496,7 @@ function mostrarToast(mensagem) {
     }, 3000);
 }
 
-// ========================================================
-// EVENTO DE CARREGAMENTO - VERIFICA LINK COMPARTILHADO
-// ========================================================
+
 window.addEventListener("DOMContentLoaded", () => {
     const params = new URLSearchParams(window.location.search);
     const idParam = params.get("id");
